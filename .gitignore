@@ -27,7 +27,6 @@
 *.lib
 
 # Executables
-*.exe
 *.out
 *.app
 CyBirdProgrammingTest/.vs/CyBirdProgrammingTest/v16/Browse.VC.opendb
