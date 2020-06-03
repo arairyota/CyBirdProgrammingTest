@@ -151,7 +151,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cash.cpp" />
     <ClCompile Include="CyBirdProgrammingTest.cpp" />
+    <ClCompile Include="ElectronicMoney.cpp" />
+    <ClCompile Include="Human.cpp" />
+    <ClCompile Include="Money.cpp" />
+    <ClCompile Include="Server.cpp" />
+    <ClCompile Include="TicketMachine.cpp" />
+    <ClCompile Include="Wallet.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Cash.h" />
+    <ClInclude Include="ElectronicMoney.h" />
+    <ClInclude Include="Human.h" />
+    <ClInclude Include="Money.h" />
+    <ClInclude Include="Server.h" />
+    <ClInclude Include="TicketMachine.h" />
+    <ClInclude Include="Wallet.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

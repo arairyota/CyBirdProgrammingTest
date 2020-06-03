@@ -2,9 +2,30 @@
 //
 
 #include <iostream>
+#include "TicketMachine.h"
+#include "Human.h"
+
 
 int main()
 {
+	TicketMachine *JR = new TicketMachine;
+	Human* user = new Human;
+
+	JR->Init();
+	user->Init();
+
+	JR->StandbyMode(user);
+
+	JR->SelectMode();
+
+	JR->MonetaryDemand(); //金銭要求
+
+	JR->Buy(); //購入処理
+
+	JR->Check(); //投入された金額確認
+
+	user->CheckWallet();
+
     std::cout << "Hello World!\n";
 }
 
