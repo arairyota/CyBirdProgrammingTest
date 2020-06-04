@@ -37,11 +37,12 @@ void TicketMachine::StandbyMode(Human* guest)
 void TicketMachine::SelectMode()
 {
 	_mode = 0;
-	do {
+	while (!(_mode >= CASH && _mode <= ELECT_CASH)) {
+		_mode = 0;
 		std::cout << "Œ»‹à‚Å‚Ìw“ü‚Ìê‡‚Í1\n“dŽqƒ}ƒl[‚Å‚Ìw“ü‚Ìê‡‚Í2‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢\n";
 		scanf("%d", &_mode);
 
-	} while (_mode == INIT || _mode > ELECT_CASH); //1‚©2‚ª‘I‘ð‚³‚ê‚é‚Ü‚ÅŒJ‚è•Ô‚·
+	}  //1‚©2‚ª‘I‘ð‚³‚ê‚é‚Ü‚ÅŒJ‚è•Ô‚·
 
 
 	
@@ -59,7 +60,6 @@ void TicketMachine::MonetaryDemand()
 	if (_mode == CASH) {
 		do {
 			std::cout << "Œ»Ý‚Ì“Š“ü‹àŠz‚Í" << sum << "‰~‚Å‚·\n" << std::endl;
-			//printf("Œ»Ý‚Ì“Š“ü‹àŠz‚Í%d‰~‚Å‚·\n", sum);
 			Draw("10‰~‹Ê‚ð“ü‚ê‚éê‡‚Í0\n");
 			Draw("50‰~‹Ê‚ð“ü‚ê‚éê‡‚Í1\n");
 			Draw("100‰~‹Ê‚ð“ü‚ê‚éê‡‚Í2\n");
