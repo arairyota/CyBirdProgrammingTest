@@ -25,6 +25,9 @@ int main()
 	JR->Check(); //投入された金額確認
 
 	user->CheckWallet();
+
+	//std::cout << "何かキーを入力して終了\n" << std::endl;
+	system("pause");
 }
 
 // プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー

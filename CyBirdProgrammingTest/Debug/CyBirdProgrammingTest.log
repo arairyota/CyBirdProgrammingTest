@@ -1,2 +1,2 @@
-﻿  TicketMachine.cpp
-  CyBirdProgrammingTest.vcxproj -> D:\HAL\就活\CyBird\project\CyBirdProgrammingTest\Debug\CyBirdProgrammingTest.exe
+﻿  CyBirdProgrammingTest.cpp
+D:\HAL\就活\CyBird\project\CyBirdProgrammingTest\CyBirdProgrammingTest.cpp : fatal error C1041: プログラム データベース 'D:\HAL\就活\CyBird\project\CyBirdProgrammingTest\Debug\vc142.pdb' を開けません。複数の CL.EXE が同じ .PDB ファイルに書き込む場合、/FS を使用してください。

@@ -1,3 +1,4 @@
+
 #include <iostream>
 
 #include "Human.h"
@@ -5,6 +6,9 @@
 #include "Wallet.h"
 
 #include "ElectronicMoney.h"
+
+#pragma warning(disable:4996)
+#define _CRT_SECURE_NO_WARNINGS
 
 void Human::Init()
 {
