@@ -24,9 +24,6 @@
     <ClCompile Include="Human.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Cash.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Wallet.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>

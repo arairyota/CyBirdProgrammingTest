@@ -18,6 +18,7 @@ void Human::Init()
 	_wallet->Deposit();
 }
 
+//現金を出す関数
 Cash* Human::CashTake(int num)
 {
 	Cash* cash = _wallet->GetCash(num);
@@ -61,6 +62,7 @@ Cash* Human::CashTake(int num)
 	return cash;
 }
 
+//財布の中確認
 void Human::CheckWallet()
 {
 	int sum = 0; //合計
@@ -90,5 +92,6 @@ inline std::list<T*> Human::CashSort(Wallet* wallet)
 			cashList.push_back((T*)it);
 		}
 	}
+
 	return cashList;
 }

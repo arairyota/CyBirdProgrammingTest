@@ -151,7 +151,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Cash.cpp" />
     <ClCompile Include="CyBirdProgrammingTest.cpp" />
     <ClCompile Include="ElectronicMoney.cpp" />
     <ClCompile Include="Human.cpp" />

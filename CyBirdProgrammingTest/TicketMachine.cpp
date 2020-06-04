@@ -38,26 +38,23 @@ void TicketMachine::StandbyMode(Human* guest)
 void TicketMachine::SelectMode()
 {
 	_mode = 0;
+
 	while (!(_mode >= CASH && _mode <= ELECT_CASH)) {
 		_mode = 0;
 		std::cout << "現金での購入の場合は1\n電子マネーでの購入の場合は2を入力してください\n";
 		scanf("%d", &_mode);
 
 	}  //1か2が選択されるまで繰り返す
-
-
-	
 }
 
 //金銭要求
 void TicketMachine::MonetaryDemand()
 {
 	int sum = 0; //投入された合計金額
-	int total = 0;
-	bool isMoneyInput = false;
 
 	Draw("お金を投入してください\n");
 
+	//選択マナー払いが選択されたら
 	if (_mode == CASH) {
 		do {
 			std::cout << "現在の投入金額は" << sum << "円です\n" << std::endl;
@@ -68,18 +65,18 @@ void TicketMachine::MonetaryDemand()
 			Draw("1000円玉を入れる場合は4\n");
 			Draw("5000円玉を入れる場合は5\n");
 			Draw("10000円玉を入れる場合は6\n");
-			int inputNumber;
+			int inputNumber; //金種選択用変数
 			scanf("%d", &inputNumber);
 
 			Cash* cash = _guest->CashTake(inputNumber);
 			if (cash != nullptr) _cashList[inputNumber].push_back(cash); //選択した現金が0ではなかった場合実行
 			
 			sum += cash->GetValue();
-			
-			if (_cashPrice <= sum) isMoneyInput = true;
-		} while (!isMoneyInput);
+
+		} while (!(_cashPrice <= sum)); //チケットの金額に満たせたら
 	}
 
+	//電子マネー払いが選択されたら
 	if (_mode == ELECT_CASH) {
 		if (_electronicPrice < _guest->GetElectronicMoney()->GetValue()) {
 			//Serverにアクセスして成功したら減算 失敗なら最初からやり直し
@@ -109,6 +106,8 @@ void TicketMachine::Draw(std::string letter)
 	std::cout << letter << std::endl;
 }
 
+//合計関数
+//引数(合計を出したいCashクラスのリストのアドレス)
 int TicketMachine::Total(std::list<Cash*>* list)
 {
 	int sum = 0;
@@ -119,6 +118,7 @@ int TicketMachine::Total(std::list<Cash*>* list)
 
 	return sum;
 }
+
 
 void TicketMachine::Buy()
 {

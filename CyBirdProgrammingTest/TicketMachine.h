@@ -30,7 +30,7 @@ public:
 
 	int Total(std::list<Cash*>* list);
 
-	void Buy();
+	void Buy(); //w“üˆ—
 
 	void Change(int change); //‚¨‚Â‚èŒvZˆ—
 

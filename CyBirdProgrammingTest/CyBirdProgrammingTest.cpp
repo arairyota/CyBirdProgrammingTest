@@ -11,12 +11,12 @@ int main()
 	TicketMachine *JR = new TicketMachine;
 	Human* user = new Human;
 
-	JR->Init();
-	user->Init();
+	JR->Init();		//初期化
+	user->Init();	//初期化
 
-	JR->StandbyMode(user);
+	JR->StandbyMode(user); //待機中（客の情報を取得）
 
-	JR->SelectMode();
+	JR->SelectMode(); //現金or電子マネー選択
 
 	JR->MonetaryDemand(); //金銭要求
 
@@ -26,7 +26,6 @@ int main()
 
 	user->CheckWallet();
 
-	//std::cout << "何かキーを入力して終了\n" << std::endl;
 	system("pause");
 }
 
